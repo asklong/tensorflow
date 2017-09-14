@@ -1,0 +1,1 @@
+ check gpu useage: nvidia-smi -l 3
