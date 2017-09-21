@@ -1,1 +1,5 @@
  check gpu useage: nvidia-smi -l 3
+ 
+ InvalidArgumentError Assign requires shapes of both tensors to match. lhs shape= [3957] rhs shape= [5771]
+ your old lable number is 5771, your new lable number is 3957. and your old check point is there, when you run the train model, your model
+ will use the old check point(label 5571). so the solution is delete old check point file, run the process again. 
