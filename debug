@@ -2,3 +2,4 @@ bug 1:
 when we set cnn numbers, we have to set in cnn.py and eval.py: evaluate(), 121 lines.
 because in the eval file, we also need to set the cnn numbers to set the cnn structure.
 in cnn.py file, we set the cnn number in the structure.
+n_cnn=5
