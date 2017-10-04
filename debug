@@ -1,5 +1,8 @@
-bug 1:
+debug:
 when we set cnn numbers, we have to set in cnn.py and eval.py: evaluate(), 121 lines.
 because in the eval file, we also need to set the cnn numbers to set the cnn structure.
 in cnn.py file, we set the cnn number in the structure.
 n_cnn=5
+
+how to set steps:
+in file gup_train.py, we set the max_steps to 50 or we could change the number to other smaller/larger numbers.
