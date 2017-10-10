@@ -13,3 +13,4 @@ in file gup_train.py, in line 22, we set the max_steps to 50 or we could change 
 
 only use one attribute:
 go to gen_data, change label gengeater, select_attr=['color']
+go to gen tfrecord, change image_size to 224, num_class to 1261
