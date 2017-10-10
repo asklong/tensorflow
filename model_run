@@ -11,4 +11,5 @@ how to set steps:
 in file gup_train.py, in line 22, we set the max_steps to 50 or we could change the number to other smaller/larger numbers.
 
 
-
+only use one attribute:
+go to gen_data, change label gengeater, select_attr=['color']
