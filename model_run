@@ -7,7 +7,36 @@ in train.py file, we set the n_cnn to 12 in line 40.
 
 
 
-how to set steps:
+when we have python base64 decode incorrect padding:
+http://www.jianshu.com/p/8bada95adac5
+解决此问题的方法很简单，对base64解码的string补齐等号就可以了，如下代码：
+
+def decode_base64(data):
+
+    """Decode base64, padding being optional.
+
+    :param data: Base64 data as an ASCII byte string
+
+    :returns: The decoded byte string.
+
+     """
+
+    missing_padding=4-len(data)%4
+
+ifmissing_padding:
+
+    data+=b'='*missing_padding
+
+returnbase64.decodestring(data)
+
+#returnbase64.b64decode(data)
+
+
+
+
+
+
+how to set training steps:
 in file gup_train.py, in line 22, we set the max_steps to 50 or we could change the number to other smaller/larger numbers.
 
 
@@ -15,3 +44,15 @@ only use one attribute and 224*224 image:
 go to gen_data, change label gengeater, select_attr=['color']
 go to gen tfrecord, change image_size to 224, num_class to 1261
 go to gen_tfrecord, channgel should be 4
+
+
+when the input is not match with the input requested from the model:
+we meet the error: reshape not right...., so we should check the size of the input picture and the channel number:
+check size of the picture:
+from PIL import Image
+with Image.open(filepath) as img:
+    width, height = img.size
+    #check size is 224 * 224
+    #check the channel number:
+    len(image.split())
+
