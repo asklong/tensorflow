@@ -66,3 +66,10 @@ Tensor("Variable:0", shape=(11, 11, 3, 96), dtype=float32_ref).
 A TensorFlow computation, represented as a dataflow graph.
 A Graph contains a set of tf.Operation objects, which represent units of computation; 
 and tf.Tensor objects, which represent the units of data that flow between operations.
+
+
+
+get the variable name and value from the check point:
+from tensorflow.python.tools.inspect_checkpoint import print_tensors_in_checkpoint_file
+print_tensors_in_checkpoint_file(file_name='./tmp/mdl_ckpt', tensor_name='', all_tensors=False)
+details for the function: https://github.com/tensorflow/tensorflow/blob/master/tensorflow/python/tools/inspect_checkpoint.py
