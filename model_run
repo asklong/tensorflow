@@ -56,3 +56,9 @@ with Image.open(filepath) as img:
     #check the channel number:
     len(image.split())
 
+
+
+ValueError: Tensor("tower_0/fifo_queue_Dequeue:0", 
+shape=(512, 224, 224, 3), dtype=float32, device=/device:GPU:0) 
+must be from the same graph as 
+Tensor("Variable:0", shape=(11, 11, 3, 96), dtype=float32_ref).
