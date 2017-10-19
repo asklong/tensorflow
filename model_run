@@ -76,6 +76,8 @@ details for the function: https://github.com/tensorflow/tensorflow/blob/master/t
 
 
 
+transfer learning:
+
 get the parametes from one model, and freeze the variables on the model: 
 set trainable to False, and initializer as tensor: net_data["conv1"][0](this is a parameter from out side model)
 def _pre_train_variable_on_cpu(name, initializer):
