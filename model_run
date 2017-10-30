@@ -84,3 +84,14 @@ def _pre_train_variable_on_cpu(name, initializer):
     with tf.device('/cpu:0'):
          var = tf.get_variable(name, initializer=initializer, trainable=False)
      return var
+
+
+
+debug the model:
+add those code in your code:
+# debug
+sess = tf_debug.LocalCLIDebugWrapperSession(sess)
+sess.add_tensor_filter("has_inf_or_nan", tf_debug.has_inf_or_nan)
+
+go to your code: in tfdbg:
+python -m dynamic_rnn.py --debug
