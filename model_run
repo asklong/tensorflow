@@ -89,6 +89,7 @@ def _pre_train_variable_on_cpu(name, initializer):
 
 debug the model:
 add those code in your code:
+from tensorflow.python import debug as tf_debug
 # debug
 sess = tf_debug.LocalCLIDebugWrapperSession(sess)
 sess.add_tensor_filter("has_inf_or_nan", tf_debug.has_inf_or_nan)
