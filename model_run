@@ -84,6 +84,8 @@ def _pre_train_variable_on_cpu(name, initializer):
     with tf.device('/cpu:0'):
          var = tf.get_variable(name, initializer=initializer, trainable=False)
      return var
+     
+the parameter is stored in the checkpoint.
 
 
 
