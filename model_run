@@ -86,6 +86,8 @@ def _pre_train_variable_on_cpu(name, initializer):
      return var
      
 the parameter is stored in the checkpoint.
+we should read the parameter and initialize the parameter we need to fixed.
+net_data = load("/home/admin/kejin/multi-task_cnn_pairwise_224/cnn/bvlc_alexnet.npy").item()
 
 
 
