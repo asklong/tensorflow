@@ -1,0 +1,19 @@
+check the tensor in checkpoint and bvlc:
+
+from tensorflow.python.tools.inspect_checkpoint import print_tensors_in_checkpoint_file
+from numpy import *
+# we check the tensor in the old cnn
+print_tensors_in_checkpoint_file(file_name='../backtmp/model.ckpt-49999', tensor_name='CNN0/conv1/biases', all_tensors=False)
+
+# this is the tensor from bvlc
+net_data = load("/home/admin/kejin/multi-task_cnn_pairwise_224/cnn/bvlc_alexnet.npy").item()
+
+#
+print shape(net_data["conv4"])
+
+# (11, 11, 3, 96)
+print shape(net_data["conv1"][0])
+
+# net_data["conv1"][1] is the basis of conv1
+# (96,)
+print shape(net_data["conv1"][1])
